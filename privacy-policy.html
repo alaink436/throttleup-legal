@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThrottleUp — Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e2e8f0; line-height: 1.7; }
+    header { background: linear-gradient(135deg, #EA580C, #FB923C); padding: 48px 24px 32px; text-align: center; }
+    header h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+    header p { color: rgba(255,255,255,0.85); margin-top: 8px; font-size: 1rem; }
+    .lang-switch { display: flex; justify-content: center; gap: 12px; margin-top: 16px; }
+    .lang-switch button { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 6px 16px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; }
+    .lang-switch button.active, .lang-switch button:hover { background: rgba(255,255,255,0.35); }
+    main { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+    .section { background: #1a1a1a; border: 1px solid #2d2d2d; border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+    .section h2 { font-size: 1rem; font-weight: 700; color: #FB923C; margin-bottom: 10px; }
+    .section p, .section li { font-size: 0.9rem; color: #94a3b8; }
+    .section ul { padding-left: 18px; }
+    .section li { margin-bottom: 4px; }
+    .updated { text-align: center; color: #475569; font-size: 0.8rem; margin-top: 32px; }
+    a { color: #FB923C; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏍️ ThrottleUp</h1>
+    <p id="header-sub">Privacy Policy</p>
+    <div class="lang-switch">
+      <button class="active" onclick="setLang('en')">English</button>
+      <button onclick="setLang('de')">Deutsch</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ENGLISH -->
+    <div id="en">
+      <div class="section">
+        <h2>Data Storage</h2>
+        <p>All data is stored securely on Supabase servers in the European Union (eu-central-1, Frankfurt). We use industry-standard encryption for data in transit (TLS/SSL) and at rest.</p>
+      </div>
+      <div class="section">
+        <h2>Data We Collect</h2>
+        <ul>
+          <li>Email address and authentication credentials</li>
+          <li>Items you create (motorcycles, maintenance, parts, etc.)</li>
+          <li>Photos you upload</li>
+          <li>Push notification tokens</li>
+          <li>Basic usage data</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>VIN Scanning &amp; AI Processing</h2>
+        <p>When you scan a VIN photo, the image is processed server-side:</p>
+        <ul>
+          <li>The image is encrypted and sent to our server for analysis</li>
+          <li>The AI extracts relevant information (make, model, year)</li>
+          <li>The image is not permanently stored on our servers (only the extracted data)</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Third-Party Services</h2>
+        <ul>
+          <li>Supabase: Database, auth, file storage (EU servers, Frankfurt)</li>
+          <li>RevenueCat: In-app purchases</li>
+          <li>Apple / Firebase: Push notifications</li>
+          <li>NHTSA vPIC API: Vehicle identification and recall data (US Government, public API)</li>
+        </ul>
+        <p style="margin-top:10px">We do not sell or share your data with advertisers.</p>
+      </div>
+      <div class="section">
+        <h2>Your Rights (GDPR)</h2>
+        <ul>
+          <li>Access your personal data</li>
+          <li>Correct inaccurate data</li>
+          <li>Delete your account and all data</li>
+          <li>Export your data (Art. 20 GDPR)</li>
+          <li>Withdraw consent at any time</li>
+        </ul>
+        <p style="margin-top:10px">Contact: <a href="mailto:throttleup@gmail.com">throttleup@gmail.com</a></p>
+      </div>
+      <div class="section">
+        <h2>Data Retention</h2>
+        <p>We retain your data as long as your account is active. If you delete your account, all personal data is permanently removed within 30 days.</p>
+      </div>
+    </div>
+
+    <!-- GERMAN -->
+    <div id="de" class="hidden">
+      <div class="section">
+        <h2>Datenspeicherung</h2>
+        <p>Deine Daten werden sicher auf Supabase-Servern in der Europäischen Union (eu-central-1, Frankfurt) gespeichert. Wir verwenden branchenübliche Verschlüsselung für Daten während der Übertragung (TLS/SSL) und im Ruhezustand.</p>
+      </div>
+      <div class="section">
+        <h2>Welche Daten wir erheben</h2>
+        <ul>
+          <li>E-Mail-Adresse und Anmeldedaten</li>
+          <li>Von dir erstellte Einträge (Motorräder, Wartungen, Teile etc.)</li>
+          <li>Hochgeladene Fotos</li>
+          <li>Push-Notification-Tokens</li>
+          <li>Grundlegende Nutzungsdaten</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>VIN-Scan &amp; KI-Verarbeitung</h2>
+        <p>Wenn du ein Foto einer Fahrgestellnummer scannst, wird das Bild serverseitig verarbeitet:</p>
+        <ul>
+          <li>Das Bild wird verschlüsselt an unseren Server gesendet und zur Analyse weitergeleitet</li>
+          <li>Die KI extrahiert relevante Informationen (Hersteller, Modell, Baujahr)</li>
+          <li>Das Bild wird nicht dauerhaft auf unseren Servern gespeichert (nur die extrahierten Daten)</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Drittanbieter</h2>
+        <ul>
+          <li>Supabase: Datenbank, Auth, Dateispeicher (EU-Server, Frankfurt)</li>
+          <li>RevenueCat: In-App-Käufe</li>
+          <li>Apple / Firebase: Push-Benachrichtigungen</li>
+          <li>NHTSA vPIC API: Fahrzeugidentifikation und Rückrufdaten (US-Behörde, öffentliche API)</li>
+        </ul>
+        <p style="margin-top:10px">Wir verkaufen oder teilen deine Daten nicht mit Werbetreibenden.</p>
+      </div>
+      <div class="section">
+        <h2>Deine Rechte (DSGVO)</h2>
+        <ul>
+          <li>Auskunft über deine Daten</li>
+          <li>Berichtigung unrichtiger Daten</li>
+          <li>Löschung deines Kontos und aller Daten</li>
+          <li>Datenexport (Art. 20 DSGVO)</li>
+          <li>Widerruf der Einwilligung</li>
+        </ul>
+        <p style="margin-top:10px">Kontakt: <a href="mailto:throttleup@gmail.com">throttleup@gmail.com</a></p>
+      </div>
+      <div class="section">
+        <h2>Datenaufbewahrung</h2>
+        <p>Wir speichern deine Daten, solange dein Konto aktiv ist. Bei Kontolöschung werden alle personenbezogenen Daten innerhalb von 30 Tagen unwiderruflich gelöscht.</p>
+      </div>
+    </div>
+
+    <p class="updated">Last updated: April 2026 · <a href="index.html">← Back</a></p>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('en').className = lang === 'en' ? '' : 'hidden';
+      document.getElementById('de').className = lang === 'de' ? '' : 'hidden';
+      document.getElementById('header-sub').textContent = lang === 'en' ? 'Privacy Policy' : 'Datenschutzerklärung';
+      document.querySelectorAll('.lang-switch button').forEach((b, i) => {
+        b.className = (i === 0 && lang === 'en') || (i === 1 && lang === 'de') ? 'active' : '';
+      });
+    }
+  </script>
+</body>
+</html>
