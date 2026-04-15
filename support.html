@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThrottleUp — Support</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e2e8f0; line-height: 1.7; }
+    header { background: linear-gradient(135deg, #EA580C, #FB923C); padding: 48px 24px 32px; text-align: center; }
+    header h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+    header p { color: rgba(255,255,255,0.85); margin-top: 8px; font-size: 1rem; }
+    .lang-switch { display: flex; justify-content: center; gap: 12px; margin-top: 16px; }
+    .lang-switch button { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 6px 16px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; }
+    .lang-switch button.active, .lang-switch button:hover { background: rgba(255,255,255,0.35); }
+    main { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+    .section { background: #1a1a1a; border: 1px solid #2d2d2d; border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+    .section h2 { font-size: 1rem; font-weight: 700; color: #FB923C; margin-bottom: 10px; }
+    .section p, .section li { font-size: 0.9rem; color: #94a3b8; }
+    .section ul { padding-left: 18px; }
+    .section li { margin-bottom: 4px; }
+    .contact-card { background: #1a1a1a; border: 1px solid #2d2d2d; border-radius: 16px; padding: 28px; margin-bottom: 16px; display: flex; align-items: center; gap: 20px; text-decoration: none; transition: border-color 0.2s; }
+    .contact-card:hover { border-color: #EA580C; }
+    .contact-icon { font-size: 2rem; }
+    .contact-text h3 { font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+    .contact-text p { font-size: 0.85rem; color: #64748b; margin-top: 2px; }
+    .updated { text-align: center; color: #475569; font-size: 0.8rem; margin-top: 32px; }
+    a { color: #FB923C; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hidden { display: none; }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('hidden', el.dataset.lang !== lang);
+      });
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.btn === lang);
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🏍️ ThrottleUp</h1>
+    <p>Support & Help</p>
+    <div class="lang-switch">
+      <button class="active" data-btn="en" onclick="switchLang('en')">English</button>
+      <button data-btn="de" onclick="switchLang('de')">Deutsch</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- English -->
+    <div data-lang="en">
+      <a href="mailto:throttleup@gmail.com" class="contact-card">
+        <span class="contact-icon">📧</span>
+        <div class="contact-text">
+          <h3>Email Support</h3>
+          <p>throttleup@gmail.com — we typically reply within 24 hours</p>
+        </div>
+      </a>
+
+      <div class="section">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="section">
+        <h2>How do I add a motorcycle?</h2>
+        <p>Open the Garage tab and tap the "+" button. Enter your motorcycle details manually or use the VIN scanner to auto-detect make, model and year.</p>
+      </div>
+
+      <div class="section">
+        <h2>How does the VIN scanner work?</h2>
+        <p>Point your camera at the VIN plate on your motorcycle frame. The on-device AI reads the 17-character code and decodes it — no internet connection required. You can also enter the VIN manually.</p>
+      </div>
+
+      <div class="section">
+        <h2>What is included in the free version?</h2>
+        <p>The free version includes up to 20 entries across all categories (motorcycles, maintenance, parts, gear, modifications, wishlist). Upgrade to Premium for unlimited entries, VIN scanner, garage groups, export and more.</p>
+      </div>
+
+      <div class="section">
+        <h2>How do Garage Groups work?</h2>
+        <p>Create a group in the Group tab, then share the invite code with your riding buddies. Group members can see shared rides, propose new rides with map and date, and RSVP with one tap.</p>
+      </div>
+
+      <div class="section">
+        <h2>How do I restore my Premium purchase?</h2>
+        <p>Go to Settings and tap "Restore Purchases". Your subscription is linked to your Apple ID or Google account and will be restored automatically.</p>
+      </div>
+
+      <div class="section">
+        <h2>How do I cancel my subscription?</h2>
+        <p>Subscriptions are managed through your device's app store. On iOS, go to Settings → Apple ID → Subscriptions. On Android, open the Google Play Store → Subscriptions.</p>
+      </div>
+
+      <div class="section">
+        <h2>How do I delete my account?</h2>
+        <p>Go to Settings → Account → Delete Account. This permanently removes all your data from our servers. This action cannot be undone.</p>
+      </div>
+
+      <div class="section">
+        <h2>Where is my data stored?</h2>
+        <p>Your data is stored securely on servers in the European Union. VIN scanning is processed entirely on your device and never leaves your phone.</p>
+      </div>
+    </div>
+
+    <!-- Deutsch -->
+    <div data-lang="de" class="hidden">
+      <a href="mailto:throttleup@gmail.com" class="contact-card">
+        <span class="contact-icon">📧</span>
+        <div class="contact-text">
+          <h3>E-Mail-Support</h3>
+          <p>throttleup@gmail.com — wir antworten in der Regel innerhalb von 24 Stunden</p>
+        </div>
+      </a>
+
+      <div class="section">
+        <h2>Häufig gestellte Fragen</h2>
+      </div>
+
+      <div class="section">
+        <h2>Wie füge ich ein Motorrad hinzu?</h2>
+        <p>Öffne den Garage-Tab und tippe auf "+". Gib die Daten manuell ein oder nutze den VIN-Scanner, um Hersteller, Modell und Baujahr automatisch zu erkennen.</p>
+      </div>
+
+      <div class="section">
+        <h2>Wie funktioniert der VIN-Scanner?</h2>
+        <p>Richte die Kamera auf die Fahrgestellnummer am Rahmen deines Motorrads. Die KI auf dem Gerät liest den 17-stelligen Code und dekodiert ihn — ohne Internetverbindung. Du kannst die VIN auch manuell eingeben.</p>
+      </div>
+
+      <div class="section">
+        <h2>Was ist in der kostenlosen Version enthalten?</h2>
+        <p>Die kostenlose Version umfasst bis zu 20 Einträge über alle Kategorien (Motorräder, Wartung, Teile, Ausrüstung, Umbauten, Wunschliste). Upgrade auf Premium für unbegrenzte Einträge, VIN-Scanner, Garage Groups, Export und mehr.</p>
+      </div>
+
+      <div class="section">
+        <h2>Wie funktionieren Garage Groups?</h2>
+        <p>Erstelle eine Gruppe im Group-Tab und teile den Einladungscode mit deinen Fahrfreunden. Gruppenmitglieder können gemeinsame Fahrten sehen, neue Fahrten mit Karte und Datum vorschlagen und mit einem Tipp zu- oder absagen.</p>
+      </div>
+
+      <div class="section">
+        <h2>Wie stelle ich meinen Premium-Kauf wieder her?</h2>
+        <p>Gehe zu Einstellungen und tippe auf "Käufe wiederherstellen". Dein Abo ist mit deiner Apple ID oder deinem Google-Konto verknüpft und wird automatisch wiederhergestellt.</p>
+      </div>
+
+      <div class="section">
+        <h2>Wie kündige ich mein Abo?</h2>
+        <p>Abos werden über den App Store deines Geräts verwaltet. Auf iOS: Einstellungen → Apple ID → Abonnements. Auf Android: Google Play Store → Abonnements.</p>
+      </div>
+
+      <div class="section">
+        <h2>Wie lösche ich mein Konto?</h2>
+        <p>Gehe zu Einstellungen → Account → Konto löschen. Dadurch werden alle deine Daten dauerhaft von unseren Servern entfernt. Diese Aktion kann nicht rückgängig gemacht werden.</p>
+      </div>
+
+      <div class="section">
+        <h2>Wo werden meine Daten gespeichert?</h2>
+        <p>Deine Daten werden sicher auf Servern in der Europäischen Union gespeichert. Der VIN-Scan wird vollständig auf deinem Gerät verarbeitet und verlässt nie dein Handy.</p>
+      </div>
+    </div>
+
+    <p class="updated">Last updated: April 15, 2026</p>
+  </main>
+</body>
+</html>
