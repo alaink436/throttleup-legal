@@ -1,124 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ThrottleUp — Terms of Service</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — ThrottleUp</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e2e8f0; line-height: 1.7; }
-    header { background: linear-gradient(135deg, #EA580C, #FB923C); padding: 48px 24px 32px; text-align: center; }
-    header h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
-    header p { color: rgba(255,255,255,0.85); margin-top: 8px; font-size: 1rem; }
-    .lang-switch { display: flex; justify-content: center; gap: 12px; margin-top: 16px; }
-    .lang-switch button { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 6px 16px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; }
-    .lang-switch button.active, .lang-switch button:hover { background: rgba(255,255,255,0.35); }
-    main { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
-    .section { background: #1a1a1a; border: 1px solid #2d2d2d; border-radius: 16px; padding: 24px; margin-bottom: 16px; }
-    .section h2 { font-size: 1rem; font-weight: 700; color: #FB923C; margin-bottom: 10px; }
-    .section p, .section li { font-size: 0.9rem; color: #94a3b8; }
-    .section ul { padding-left: 18px; }
-    .section li { margin-bottom: 4px; }
-    .updated { text-align: center; color: #475569; font-size: 0.8rem; margin-top: 32px; }
-    a { color: #FB923C; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .hidden { display: none; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff7ed; color: #1a1a2e; line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    h1 { font-size: 28px; margin-bottom: 8px; color: #EA580C; }
+    .subtitle { font-size: 14px; color: #6b7280; margin-bottom: 32px; }
+    h2 { font-size: 20px; margin-top: 32px; margin-bottom: 12px; color: #9a3412; }
+    p, li { font-size: 15px; color: #374151; margin-bottom: 12px; }
+    ul { padding-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 6px; }
+    a { color: #EA580C; }
+    .lang-toggle { display: flex; gap: 8px; margin-bottom: 24px; }
+    .lang-toggle button { padding: 8px 20px; border-radius: 8px; border: 1px solid #d1d5db; background: #fff; cursor: pointer; font-size: 14px; font-weight: 500; }
+    .lang-toggle button.active { background: #EA580C; color: #fff; border-color: #EA580C; }
+    .section { display: none; }
+    .section.active { display: block; }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e7eb; font-size: 13px; color: #9ca3af; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🏍️ ThrottleUp</h1>
-    <p id="header-sub">Terms of Service</p>
-    <div class="lang-switch">
-      <button class="active" onclick="setLang('en')">English</button>
-      <button onclick="setLang('de')">Deutsch</button>
-    </div>
-  </header>
+  <div class="container">
+    <h1>Terms of Service</h1>
+    <p class="subtitle">Last updated: April 2026</p>
 
-  <main>
+    <div class="lang-toggle">
+      <button class="active" onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('de')">Deutsch</button>
+    </div>
+
     <!-- ENGLISH -->
-    <div id="en">
-      <div class="section">
-        <h2>Usage</h2>
-        <p>By downloading or using ThrottleUp, you agree to these Terms. You must create an account and are responsible for maintaining the security of your credentials.</p>
-      </div>
-      <div class="section">
-        <h2>Free &amp; Premium</h2>
-        <ul>
-          <li>Free: Up to 20 items, VIN scanning, photo attachments</li>
-          <li>Premium: Unlimited items, garage group sharing</li>
-        </ul>
-        <p style="margin-top:10px">Premium is billed through the App Store or Google Play. Subscriptions auto-renew unless cancelled 24h before the end of the period.</p>
-      </div>
-      <div class="section">
-        <h2>Cancellation</h2>
-        <p>You may cancel your Premium subscription at any time through your App Store or Google Play settings. You retain access until the end of the billing period.</p>
-      </div>
-      <div class="section">
-        <h2>Your Content</h2>
-        <p>You retain full ownership of all content you create. We store and process it solely to provide the app's services.</p>
-      </div>
-      <div class="section">
-        <h2>Garage Group Sharing</h2>
-        <p>Items in a garage group are visible to all members. The owner manages membership. If you leave, you lose access to shared items.</p>
-      </div>
-      <div class="section">
-        <h2>Liability</h2>
-        <p>The app is provided "as is". We are not liable for inaccurate VIN recognition, recall data accuracy, or data loss resulting from use of the app. NHTSA recall data is provided by a US Government API and may not be complete or current.</p>
-      </div>
-      <div class="section">
-        <h2>Governing Law</h2>
-        <p>These Terms are governed by the laws of Switzerland. Jurisdiction is Switzerland.</p>
-      </div>
+    <div id="en" class="section active">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using ThrottleUp ("the App"), you agree to be bound by these Terms of Service.</p>
+
+      <h2>2. Description of Service</h2>
+      <p>ThrottleUp is a motorcycle maintenance tracking app. The App helps you manage your motorcycles, track maintenance schedules, parts, gear, and modifications. It provides VIN scanning, maintenance reminders, and garage group sharing features.</p>
+
+      <h2>3. Account Registration</h2>
+      <p>You must create an account to use the App. You are responsible for maintaining the confidentiality of your account credentials.</p>
+
+      <h2>4. Free and Premium Plans</h2>
+      <ul>
+        <li><strong>Free plan:</strong> Up to 20 items with VIN scanning and photo attachments.</li>
+        <li><strong>Premium plan:</strong> Unlimited items, garage group sharing, all categories, and all premium features.</li>
+      </ul>
+      <p>Premium subscriptions are billed through the Apple App Store or Google Play Store. Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period.</p>
+
+      <h2>5. Cancellation & Refunds</h2>
+      <p>You may cancel your Premium subscription at any time through your App Store or Google Play settings. Upon cancellation, you retain Premium access until the end of the current billing period.</p>
+
+      <h2>6. User Content</h2>
+      <p>You retain full ownership of all content you create in the App (motorcycle entries, maintenance records, photos, notes). You grant us a limited license to store and process this content solely for providing the App's services.</p>
+
+      <h2>7. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the App for any illegal purpose.</li>
+        <li>Upload malicious content or attempt to compromise the App's security.</li>
+        <li>Share your account credentials with others.</li>
+        <li>Reverse engineer, decompile, or disassemble the App.</li>
+      </ul>
+
+      <h2>8. Garage Group Sharing</h2>
+      <p>When you create or join a garage group, items assigned to that group become visible to all members. The group owner manages membership. If you leave, you lose access to shared items.</p>
+
+      <h2>9. Data Accuracy</h2>
+      <p>The App's VIN scanning feature provides suggestions based on text recognition. These may not always be accurate. You are responsible for verifying all data stored in the App. We are not liable for missed maintenance schedules or inaccurate data.</p>
+
+      <h2>10. Limitation of Liability</h2>
+      <p>The App is provided "as is" without warranties. We are not liable for any damages arising from your use of the App, including missed maintenance, incorrect VIN data, or data loss.</p>
+
+      <h2>11. Governing Law</h2>
+      <p>These Terms are governed by the laws of Switzerland.</p>
+
+      <h2>12. Contact</h2>
+      <p>For questions about these Terms, contact us at:<br>
+      <a href="mailto:motolog@gmail.com">motolog@gmail.com</a></p>
     </div>
 
-    <!-- GERMAN -->
-    <div id="de" class="hidden">
-      <div class="section">
-        <h2>Nutzung</h2>
-        <p>Durch das Herunterladen oder Nutzen von ThrottleUp stimmst du diesen Nutzungsbedingungen zu. Du musst ein Konto erstellen und bist für die Sicherheit deiner Zugangsdaten verantwortlich.</p>
-      </div>
-      <div class="section">
-        <h2>Kostenlos &amp; Premium</h2>
-        <ul>
-          <li>Kostenlos: Bis zu 20 Einträge, VIN-Scan, Foto-Anhänge</li>
-          <li>Premium: Unbegrenzte Einträge, Garage-Group-Sharing</li>
-        </ul>
-        <p style="margin-top:10px">Premium wird über den App Store bzw. Google Play abgerechnet. Abos verlängern sich automatisch, sofern nicht 24h vor Ablauf gekündigt.</p>
-      </div>
-      <div class="section">
-        <h2>Kündigung</h2>
-        <p>Du kannst dein Premium-Abo jederzeit über deine App-Store- oder Google-Play-Einstellungen kündigen. Du behältst den Zugang bis zum Ende des Abrechnungszeitraums.</p>
-      </div>
-      <div class="section">
-        <h2>Deine Inhalte</h2>
-        <p>Du behältst das vollständige Eigentum an allen Inhalten. Wir speichern und verarbeiten sie ausschliesslich zur Bereitstellung der App.</p>
-      </div>
-      <div class="section">
-        <h2>Garage-Group-Sharing</h2>
-        <p>Einträge in einer Fahrgruppe sind für alle Mitglieder sichtbar. Der Eigentümer verwaltet die Mitglieder. Beim Verlassen verlierst du den Zugriff auf geteilte Einträge.</p>
-      </div>
-      <div class="section">
-        <h2>Haftung</h2>
-        <p>Die App wird "wie besehen" bereitgestellt. Wir haften nicht für fehlerhafte VIN-Erkennung, die Genauigkeit von Rückrufdaten oder Datenverluste durch die Nutzung der App. NHTSA-Rückrufdaten werden über eine US-Behörden-API bereitgestellt und können unvollständig oder veraltet sein.</p>
-      </div>
-      <div class="section">
-        <h2>Anwendbares Recht</h2>
-        <p>Diese Bedingungen unterliegen dem Recht der Schweiz. Gerichtsstand ist die Schweiz.</p>
-      </div>
+    <!-- DEUTSCH -->
+    <div id="de" class="section">
+      <h2>1. Annahme der Bedingungen</h2>
+      <p>Durch das Herunterladen, Installieren oder Nutzen von ThrottleUp („die App") erklären Sie sich mit diesen Nutzungsbedingungen einverstanden.</p>
+
+      <h2>2. Beschreibung des Dienstes</h2>
+      <p>ThrottleUp ist eine Motorrad-Wartungs-App. Die App hilft Ihnen, Ihre Motorräder zu verwalten, Wartungspläne, Teile, Ausrüstung und Modifikationen zu tracken. Sie bietet VIN-Scan, Wartungserinnerungen und Garage-Group-Sharing.</p>
+
+      <h2>3. Kontoregistrierung</h2>
+      <p>Sie müssen ein Konto erstellen, um die App zu nutzen. Sie sind für die Vertraulichkeit Ihrer Zugangsdaten verantwortlich.</p>
+
+      <h2>4. Kostenlos und Premium</h2>
+      <ul>
+        <li><strong>Kostenlos:</strong> Bis zu 20 Einträge mit VIN-Scan und Foto-Anhängen.</li>
+        <li><strong>Premium:</strong> Unbegrenzte Einträge, Garage-Group-Sharing, alle Kategorien und alle Premium-Funktionen.</li>
+      </ul>
+      <p>Premium-Abonnements werden über den Apple App Store oder Google Play Store abgerechnet. Abonnements verlängern sich automatisch, sofern nicht mindestens 24 Stunden vor Ablauf gekündigt wird.</p>
+
+      <h2>5. Kündigung & Erstattung</h2>
+      <p>Sie können Ihr Premium-Abonnement jederzeit über Ihre App-Store-Einstellungen kündigen.</p>
+
+      <h2>6. Nutzerinhalte</h2>
+      <p>Sie behalten das vollständige Eigentum an allen erstellten Inhalten. Sie gewähren uns eine eingeschränkte Lizenz zur Speicherung ausschliesslich zur Bereitstellung der App-Dienste.</p>
+
+      <h2>7. Akzeptable Nutzung</h2>
+      <p>Sie verpflichten sich, die App nicht für illegale Zwecke zu nutzen und die Sicherheit der App nicht zu gefährden.</p>
+
+      <h2>8. Garage-Group-Sharing</h2>
+      <p>Wenn Sie einer Garage Group beitreten, werden der Gruppe zugewiesene Einträge für alle Mitglieder sichtbar. Der Eigentümer verwaltet die Mitglieder.</p>
+
+      <h2>9. Datengenauigkeit</h2>
+      <p>Die VIN-Scan-Funktion liefert Vorschläge basierend auf Texterkennung, die ungenau sein können. Sie sind für die Überprüfung aller gespeicherten Daten verantwortlich.</p>
+
+      <h2>10. Haftungsbeschränkung</h2>
+      <p>Die App wird „wie besehen" bereitgestellt. Wir haften nicht für verpasste Wartungen, fehlerhafte VIN-Erkennung oder Datenverluste.</p>
+
+      <h2>11. Anwendbares Recht</h2>
+      <p>Diese Bedingungen unterliegen dem Recht der Schweiz.</p>
+
+      <h2>12. Kontakt</h2>
+      <p>Bei Fragen kontaktieren Sie uns unter:<br>
+      <a href="mailto:motolog@gmail.com">motolog@gmail.com</a></p>
     </div>
 
-    <p class="updated">Last updated: April 2026 · <a href="index.html">← Back</a></p>
-  </main>
+    <footer>
+      <p>&copy; 2026 ThrottleUp. All rights reserved.</p>
+    </footer>
+  </div>
 
   <script>
-    function setLang(lang) {
-      document.getElementById('en').className = lang === 'en' ? '' : 'hidden';
-      document.getElementById('de').className = lang === 'de' ? '' : 'hidden';
-      document.getElementById('header-sub').textContent = lang === 'en' ? 'Terms of Service' : 'Nutzungsbedingungen';
-      document.querySelectorAll('.lang-switch button').forEach((b, i) => {
-        b.className = (i === 0 && lang === 'en') || (i === 1 && lang === 'de') ? 'active' : '';
-      });
+    function switchLang(lang) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      event.target.classList.add('active');
     }
   </script>
 </body>
